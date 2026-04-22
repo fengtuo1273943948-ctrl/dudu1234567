@@ -48,17 +48,13 @@ body {
   cursor:pointer;
   color: var(--text-p);
 }
-.logo:hover {
-  color: var(--accent);
-}
+.logo:hover { color: var(--accent); }
 .nav-links { display:flex; gap:32px; align-items: center; }
 .nav-links a { font-size:15px; font-weight:300; color:var(--text-p); transition:var(--tran); cursor:pointer; }
 .nav-links a:hover { color:var(--accent); }
 
 /* dropdown */
-.dropdown {
-  position: relative;
-}
+.dropdown { position: relative; }
 .dropdown-toggle {
   cursor: pointer;
   display: flex;
@@ -85,9 +81,7 @@ body {
   visibility: visible;
   transform: translateX(-50%) translateY(0);
 }
-.dropdown-group {
-  padding: 0 16px;
-}
+.dropdown-group { padding: 0 16px; }
 .dropdown-title {
   font-size: 12px;
   font-weight: 500;
@@ -120,7 +114,7 @@ body {
 .hero {
   height:100vh;
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
-              url('https://picsum.photos/id/1048/1920/1080');
+              url('images/hero-bg.jpg'); /* 请把一张背景图命名为 hero-bg.jpg 放入 images 文件夹 */
   background-size: cover;      
   background-position: center; 
   background-attachment: fixed;
@@ -183,9 +177,7 @@ body {
   cursor:zoom-in;
 }
 .product-info { padding:24px; text-align: center; }
-.product-name {
-  display: none; /* hidden */
-}
+.product-name { display: none; }
 .product-price {
   font-size:19px; font-weight:600; color:var(--accent);
   margin: 0;
@@ -246,7 +238,6 @@ body {
   width:24px; height:24px; background:var(--accent); border-radius:50%;
   display:grid; place-items:center; color:#fff; font-size:12px;
 }
-/* 二维码容器 */
 .qrcodes-container {
   display: flex;
   justify-content: center;
@@ -299,9 +290,7 @@ body {
   background: var(--bg-light);
   transition: var(--tran);
 }
-.back-btn:hover {
-  background: #e8e8ed;
-}
+.back-btn:hover { background: #e8e8ed; }
 .brand-product-title {
   text-align: center;
   font-size: 24px;
@@ -375,26 +364,26 @@ body {
     <button class="btn" onclick="document.querySelector('.section').scrollIntoView()">Explore</button>
   </div>
 
-  <!-- brand sections (auto-rendered) -->
-  <section class="section" id="cartier"><h2 class="section-title" onclick="goToBrand('Cartier')">Cartier</h2><p class="section-desc"></p><div class="product-grid"></div></section>
-  <section class="section" id="vacheron"><h2 class="section-title" onclick="goToBrand('Vacheron Constantin')">Vacheron Constantin</h2><p class="section-desc"></p><div class="product-grid"></div></section>
-  <section class="section" id="rolex"><h2 class="section-title" onclick="goToBrand('Rolex')">Rolex</h2><p class="section-desc"></p><div class="product-grid"></div></section>
-  <section class="section" id="patek"><h2 class="section-title" onclick="goToBrand('Patek Philippe')">Patek Philippe</h2><p class="section-desc"></p><div class="product-grid"></div></section>
-  <section class="section" id="longines"><h2 class="section-title" onclick="goToBrand('Longines')">Longines</h2><p class="section-desc"></p><div class="product-grid"></div></section>
-  <section class="section" id="omega"><h2 class="section-title" onclick="goToBrand('Omega')">Omega</h2><p class="section-desc"></p><div class="product-grid"></div></section>
-  <section class="section" id="iwc"><h2 class="section-title" onclick="goToBrand('IWC')">IWC</h2><p class="section-desc"></p><div class="product-grid"></div></section>
-  <section class="section" id="jaeger"><h2 class="section-title" onclick="goToBrand('Jaeger‑LeCoultre')">Jaeger‑LeCoultre</h2><p class="section-desc"></p><div class="product-grid"></div></section>
-  <section class="section" id="ap"><h2 class="section-title" onclick="goToBrand('Audemars Piguet')">Audemars Piguet</h2><p class="section-desc"></p><div class="product-grid"></div></section>
-  <section class="section" id="richard"><h2 class="section-title" onclick="goToBrand('Richard Mille')">Richard Mille</h2><p class="section-desc"></p><div class="product-grid"></div></section>
-  <section class="section" id="lv"><h2 class="section-title" onclick="goToBrand('LV')">LV</h2><p class="section-desc"></p><div class="product-grid"></div></section>
-  <section class="section" id="hermes"><h2 class="section-title" onclick="goToBrand('Hermès')">Hermès</h2><p class="section-desc"></p><div class="product-grid"></div></section>
-  <section class="section" id="chanel"><h2 class="section-title" onclick="goToBrand('Chanel')">Chanel</h2><p class="section-desc"></p><div class="product-grid"></div></section>
+  <!-- 品牌区域，图片路径已自动生成，无需改动 -->
+  <section class="section" id="cartier"><h2 class="section-title" onclick="goToBrand('Cartier')">Cartier</h2><p class="section-desc"></p><div class="product-grid" id="grid-cartier"></div></section>
+  <section class="section" id="vacheron"><h2 class="section-title" onclick="goToBrand('Vacheron Constantin')">Vacheron Constantin</h2><p class="section-desc"></p><div class="product-grid" id="grid-vacheron"></div></section>
+  <section class="section" id="rolex"><h2 class="section-title" onclick="goToBrand('Rolex')">Rolex</h2><p class="section-desc"></p><div class="product-grid" id="grid-rolex"></div></section>
+  <section class="section" id="patek"><h2 class="section-title" onclick="goToBrand('Patek Philippe')">Patek Philippe</h2><p class="section-desc"></p><div class="product-grid" id="grid-patek"></div></section>
+  <section class="section" id="longines"><h2 class="section-title" onclick="goToBrand('Longines')">Longines</h2><p class="section-desc"></p><div class="product-grid" id="grid-longines"></div></section>
+  <section class="section" id="omega"><h2 class="section-title" onclick="goToBrand('Omega')">Omega</h2><p class="section-desc"></p><div class="product-grid" id="grid-omega"></div></section>
+  <section class="section" id="iwc"><h2 class="section-title" onclick="goToBrand('IWC')">IWC</h2><p class="section-desc"></p><div class="product-grid" id="grid-iwc"></div></section>
+  <section class="section" id="jaeger"><h2 class="section-title" onclick="goToBrand('Jaeger‑LeCoultre')">Jaeger‑LeCoultre</h2><p class="section-desc"></p><div class="product-grid" id="grid-jaeger"></div></section>
+  <section class="section" id="ap"><h2 class="section-title" onclick="goToBrand('Audemars Piguet')">Audemars Piguet</h2><p class="section-desc"></p><div class="product-grid" id="grid-ap"></div></section>
+  <section class="section" id="richard"><h2 class="section-title" onclick="goToBrand('Richard Mille')">Richard Mille</h2><p class="section-desc"></p><div class="product-grid" id="grid-richard"></div></section>
+  <section class="section" id="lv"><h2 class="section-title" onclick="goToBrand('LV')">LV</h2><p class="section-desc"></p><div class="product-grid" id="grid-lv"></div></section>
+  <section class="section" id="hermes"><h2 class="section-title" onclick="goToBrand('Hermès')">Hermès</h2><p class="section-desc"></p><div class="product-grid" id="grid-hermes"></div></section>
+  <section class="section" id="chanel"><h2 class="section-title" onclick="goToBrand('Chanel')">Chanel</h2><p class="section-desc"></p><div class="product-grid" id="grid-chanel"></div></section>
 
   <!-- craftsmanship story -->
   <section class="section">
     <div class="split">
       <div class="split-col">
-        <img src="https://picsum.photos/900/600?random=100" class="split-img">
+        <img src="images/story.jpg" class="split-img" alt="Craftsmanship"><!-- 可选图片 -->
       </div>
       <div class="split-col">
         <h2>Artisanal Excellence</h2>
@@ -424,7 +413,7 @@ body {
   <img id="bigImage" class="big-img" onclick="closeImage()">
 </div>
 
-<!-- contact modal — with WhatsApp numbers + 3 QR codes -->
+<!-- contact modal -->
 <div class="modal" id="contactModal">
   <div class="modal-box">
     <h3>Contact Us</h3>
@@ -442,11 +431,10 @@ body {
         <div>WhatsApp: +86 198 7271 9150</div>
       </div>
     </div>
-    <!-- 三张二维码图片 -->
     <div class="qrcodes-container">
-      <img src="https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/bbeedb623c874ec3a2bf9c66daf5b532.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604180444562B2FF4FF2EB8382126CF&rrcfp=8a172a1a&x-expires=1777063496&x-signature=OP9fz8i9gDxRfadHFvJM6HLdDx4%3D" alt="QR Code 1" class="qr-img">
-      <img src="https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/1fa76036a93f435c8b024a9e3dca96d5.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604180444562B2FF4FF2EB8382126CF&rrcfp=8a172a1a&x-expires=1777063496&x-signature=Ez8sCVaq%2Bjw8G43MXLAAhHTDG%2Bc%3D" alt="QR Code 2" class="qr-img">
-      <img src="https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/7603d53e23844f4c8d36c8ad96b2bfde.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604180444562B2FF4FF2EB8382126CF&rrcfp=8a172a1a&x-expires=1777063496&x-signature=njai3hGbHWI0A6THWIS6DO%2FNHKY%3D" alt="QR Code 3" class="qr-img">
+      <img src="images/qr1.jpg" alt="QR Code 1" class="qr-img">
+      <img src="images/qr2.jpg" alt="QR Code 2" class="qr-img">
+      <img src="images/qr3.jpg" alt="QR Code 3" class="qr-img">
     </div>
     <button class="close-modal" onclick="closeContact()">Close</button>
   </div>
@@ -461,365 +449,150 @@ body {
 
 <script>
 // ==============================================
-// 🚀 CONFIG — All images preserved, only UI text translated to English
+// 图片路径已按固定规则生成，你只需按品牌文件夹放入图片即可
+// 文件名格式：brand_序号.jpg （如 cartier_1.jpg, rolex_2.jpg）
 // ==============================================
-const CONFIG = {
-  // Product data: 19 Cartier + 18 Vacheron + 27 Rolex + 45 Patek + 11 Longines (removed first image) + 13 Omega + 12 IWC + 8 Jaeger + 4 AP + 7 Richard Mille + 45 LV + Hermès + Chanel
-  products: [
-    // Cartier 19
-    { id:1, name:"", brand:"Cartier", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f879daa6b3814164994b5e908a368985.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150703580411E5A433A6908D9F62&rrcfp=8a172a1a&x-expires=1776812639&x-signature=88o5wIJyewKq8HYzQLY%2BJasLsvY%3D" },
-    { id:2, name:"", brand:"Cartier", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/70bf3c38e408487e9dc65956765d2ed5.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150703580411E5A433A6908D9F62&rrcfp=8a172a1a&x-expires=1776812639&x-signature=bSHRHe8hpp89jBsqEqaLHmTGPuw%3D" },
-    { id:3, name:"", brand:"Cartier", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/9f66ad71eb6f4b35a99db7dcb8d72581.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150703580411E5A433A6908D9F62&rrcfp=8a172a1a&x-expires=1776812639&x-signature=AhE7we8uo2ErVd5LYIPpffo0Hp8%3D" },
-    { id:4, name:"", brand:"Cartier", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/4cb4d9a908c94e4ba31461e716b66382.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150703580411E5A433A6908D9F62&rrcfp=8a172a1a&x-expires=1776812639&x-signature=izlK%2B5PdvGcv5KojOZlKCmEp6vc%3D" },
-    { id:5, name:"", brand:"Cartier", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/713a10ebc8184031bb5317e76aad7008.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150703580411E5A433A6908D9F62&rrcfp=8a172a1a&x-expires=1776812639&x-signature=lMEzEbdBts%2FEq4TdXgRyB1Qw%2BJs%3D" },
-    { id:6, name:"", brand:"Cartier", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/1a5e00ff373e4574bd84f18b70921afa.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150703580411E5A433A6908D9F62&rrcfp=8a172a1a&x-expires=1776812639&x-signature=I7gy2cytgwVM8mSBZkCKwujTyDc%3D" },
-    { id:7, name:"", brand:"Cartier", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/122b116083b441b79719df55bd889914.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150703580411E5A433A6908D9F62&rrcfp=8a172a1a&x-expires=1776812639&x-signature=blJB7MudLry%2BkyEvd97n8M4nB%2Bw%3D" },
-    { id:8, name:"", brand:"Cartier", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/ee31a381584346acb584d5a618600f0d.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150703580411E5A433A6908D9F62&rrcfp=8a172a1a&x-expires=1776812639&x-signature=JmpRtkyES4jBaUbBve01FgkaJFg%3D" },
-    { id:9, name:"", brand:"Cartier", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d90c06e47e0b42b2ac6b0a4d343b6e58.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150703580411E5A433A6908D9F62&rrcfp=8a172a1a&x-expires=1776812639&x-signature=gCcoq2B7AIgF7jPSGYkOkmjb5G0%3D" },
-    { id:10, name:"", brand:"Cartier", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/2374edb0573e4902890b31cbd68e31e3.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415070942DB7B68439690CB901BC0&rrcfp=8a172a1a&x-expires=1776812982&x-signature=x6rj9PqcRnv7iJ9NdjbzdRv%2BZWo%3D" },
-    { id:11, name:"", brand:"Cartier", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/785a29d45136485d9cfc9f01c7e4336a.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415070942DB7B68439690CB901BC0&rrcfp=8a172a1a&x-expires=1776812982&x-signature=vozc%2BH5nC66b7LmBiVdezzVEILs%3D" },
-    { id:12, name:"", brand:"Cartier", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/466ad74e25ef4267bab649fbd9e9d404.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415070942DB7B68439690CB901BC0&rrcfp=8a172a1a&x-expires=1776812982&x-signature=XzXVwkaKArznuYWaz6hUU8gtWfc%3D" },
-    { id:13, name:"", brand:"Cartier", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/a0139dad690d47a9bf3e04f6346f70b7.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415070942DB7B68439690CB901BC0&rrcfp=8a172a1a&x-expires=1776812982&x-signature=FR55f311cQRKBpw%2FucBIhQbVVz8%3D" },
-    { id:14, name:"", brand:"Cartier", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/1d341a785a234f06b757704e927c8542.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415070942DB7B68439690CB901BC0&rrcfp=8a172a1a&x-expires=1776812982&x-signature=gGeKpiMFTD9Xh9JjygTdedMXxe0%3D" },
-    { id:15, name:"", brand:"Cartier", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/84b4bf8d9d824dbda96453956c736f94.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415070942DB7B68439690CB901BC0&rrcfp=8a172a1a&x-expires=1776812982&x-signature=LkLkG11RtSlFojZxekHwf8jJvV8%3D" },
-    { id:16, name:"", brand:"Cartier", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/98412838c89645f8ac46171f719bf1d6.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415070942DB7B68439690CB901BC0&rrcfp=8a172a1a&x-expires=1776812982&x-signature=F%2FoXcBNPbvuy2PFs0I0u1jgkhio%3D" },
-    { id:17, name:"", brand:"Cartier", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/ea473582c46247f79357caa0af0ef6cd.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415070942DB7B68439690CB901BC0&rrcfp=8a172a1a&x-expires=1776812982&x-signature=QXsO0E3CoYp3Pj5iXl9E4QFLxZM%3D" },
-    { id:18, name:"", brand:"Cartier", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/a38265cdad5a43198cf40b2359983b7a.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415070942DB7B68439690CB901BC0&rrcfp=8a172a1a&x-expires=1776812982&x-signature=dLWQsQGq%2F6tmfqb0SFc7ot7imOQ%3D" },
-    { id:19, name:"", brand:"Cartier", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/a9a3072fe13b4ca5b49346445ca22a5b.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415070942DB7B68439690CB901BC0&rrcfp=8a172a1a&x-expires=1776812982&x-signature=OiYHI6uCpEXLQUos3cBAEfk1zVM%3D" },
-    
-    // Vacheron Constantin 18
-    { id:20, name:"", brand:"Vacheron Constantin", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d0c2735206954fd0952a7a61e0e886b4.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041507483729DA0078BDCB0C8FB127&rrcfp=8a172a1a&x-expires=1776815317&x-signature=l9NwxGT2%2BJl6hIsHjAI0Fhe%2FIrQ%3D" },
-    { id:21, name:"", brand:"Vacheron Constantin", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/953fb35bd9824f71a2745fb8da856fb3.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041507483729DA0078BDCB0C8FB127&rrcfp=8a172a1a&x-expires=1776815317&x-signature=bpg5zQBn2biE2gNavdPeXCkoAlg%3D" },
-    { id:22, name:"", brand:"Vacheron Constantin", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/130fe276e965428193b38d02077e3ffd.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041507483729DA0078BDCB0C8FB127&rrcfp=8a172a1a&x-expires=1776815317&x-signature=fY4bn%2FQhxodbOLZjPJ7LRbGdhxo%3D" },
-    { id:23, name:"", brand:"Vacheron Constantin", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/b283c008bd344fa9b4fc977b3d9fec4c.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041507483729DA0078BDCB0C8FB127&rrcfp=8a172a1a&x-expires=1776815317&x-signature=2Y3J4hbud5MvqXPQduk7iIklQUw%3D" },
-    { id:24, name:"", brand:"Vacheron Constantin", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/6e86f33486164d4c87b7d4ac86e701f0.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041507483729DA0078BDCB0C8FB127&rrcfp=8a172a1a&x-expires=1776815317&x-signature=bEV0Nx7EJ0z6Yc6QR68Cbh8czIo%3D" },
-    { id:25, name:"", brand:"Vacheron Constantin", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/499c88d50c0544509a2ab9884e3d5cbd.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041507483729DA0078BDCB0C8FB127&rrcfp=8a172a1a&x-expires=1776815317&x-signature=05gnCQOfL6gIn8ilSeCLwULxaCg%3D" },
-    { id:26, name:"", brand:"Vacheron Constantin", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/0701cf677f744e72997793d357db0cd6.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041507483729DA0078BDCB0C8FB127&rrcfp=8a172a1a&x-expires=1776815317&x-signature=MwJnUfTZ27ERY93O9wz88C8231Y%3D" },
-    { id:27, name:"", brand:"Vacheron Constantin", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/4a06d3a620f4499a96ef3d14acf19d03.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041507483729DA0078BDCB0C8FB127&rrcfp=8a172a1a&x-expires=1776815317&x-signature=kBCVahw9M83gA5aGgWeJ0RVDcB0%3D" },
-    { id:28, name:"", brand:"Vacheron Constantin", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/c2bf3a056d2b4d638e7df6962d587e1a.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041507483729DA0078BDCB0C8FB127&rrcfp=8a172a1a&x-expires=1776815317&x-signature=St0lcu94LZlGNjUEMleOH%2Fv787s%3D" },
-    { id:29, name:"", brand:"Vacheron Constantin", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/ad83fe1309494c0bb22e5eb07747fbd9.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415075107F57B01FD68258E3E73DC&rrcfp=8a172a1a&x-expires=1776815467&x-signature=NPfzhz1bQ7cxIa0es03X40lciiE%3D" },
-    { id:30, name:"", brand:"Vacheron Constantin", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/25b5ab87cde4459f990ed04da443434f.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415075107F57B01FD68258E3E73DC&rrcfp=8a172a1a&x-expires=1776815467&x-signature=teeevbhoOehmnUPsJarOMUpv4lg%3D" },
-    { id:31, name:"", brand:"Vacheron Constantin", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d3afb8c0d0854137b04abc020b2c9187.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415075107F57B01FD68258E3E73DC&rrcfp=8a172a1a&x-expires=1776815467&x-signature=3qe%2BqgAU8WxsUKobpP5FuU4x9tw%3D" },
-    { id:32, name:"", brand:"Vacheron Constantin", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f8505c92c8644c59a3f4793a7c6421bb.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415075107F57B01FD68258E3E73DC&rrcfp=8a172a1a&x-expires=1776815467&x-signature=QfxTFmbPfgnCoyX2hPuIQTCDiUY%3D" },
-    { id:33, name:"", brand:"Vacheron Constantin", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/eb1a3c832f5445dbb7fd30e60c16ac14.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415075107F57B01FD68258E3E73DC&rrcfp=8a172a1a&x-expires=1776815467&x-signature=JsQl4NJXN7D4CHseI6ATQTeUyKE%3D" },
-    { id:34, name:"", brand:"Vacheron Constantin", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/652f23daf95f46caac6a9986ff57a038.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415075107F57B01FD68258E3E73DC&rrcfp=8a172a1a&x-expires=1776815467&x-signature=LLNmYKwu%2BH76TUIC46R4MwCNtq4%3D" },
-    { id:35, name:"", brand:"Vacheron Constantin", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/6194afb3446a4e048010d1d4960d0d86.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415075107F57B01FD68258E3E73DC&rrcfp=8a172a1a&x-expires=1776815467&x-signature=qXniU8ZZMaWw5sgQ7VoHgEEY2Lg%3D" },
-    { id:36, name:"", brand:"Vacheron Constantin", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f8e7b3ff578a4ed2a51cb0ff417fb6e2.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415075107F57B01FD68258E3E73DC&rrcfp=8a172a1a&x-expires=1776815467&x-signature=cEfyL1H9KolUk%2FavkVIvuvTPEX8%3D" },
-    { id:37, name:"", brand:"Vacheron Constantin", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/2a0caa19731f44ddad9ee6b2f14d0b8d.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415075107F57B01FD68258E3E73DC&rrcfp=8a172a1a&x-expires=1776815467&x-signature=jQlFFm4N%2BkL3giViiupy17OeQpk%3D" },
-    
-    // Rolex 27
-    { id:38, name:"", brand:"Rolex", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/5b4ea51d2e1f40108890d1c18e5b2e13.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150818538A141C594527AE1E8FB9&rrcfp=8a172a1a&x-expires=1776817134&x-signature=QxSj5Vi852MtdWxdOAfuyXiSrMM%3D" },
-    { id:39, name:"", brand:"Rolex", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/c3fd0dee6d8d4ba0891f3bb62f339d6b.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150818538A141C594527AE1E8FB9&rrcfp=8a172a1a&x-expires=1776817134&x-signature=QKE%2Fu4U6gs9q7CIWePzrg7%2BRp0Q%3D" },
-    { id:40, name:"", brand:"Rolex", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d80471579df845359ba7ebf7c10f7460.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150818538A141C594527AE1E8FB9&rrcfp=8a172a1a&x-expires=1776817134&x-signature=l83u81uLUkjMbS7S2351DwVml1k%3D" },
-    { id:41, name:"", brand:"Rolex", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/9d1fc2597b6740a5bbc63013d7c1bec6.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150818538A141C594527AE1E8FB9&rrcfp=8a172a1a&x-expires=1776817134&x-signature=%2BiDrJ4Ic0xJs39ZnquZku3x4znU%3D" },
-    { id:42, name:"", brand:"Rolex", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/bd1078576e18453aa62d099b7ce16756.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150818538A141C594527AE1E8FB9&rrcfp=8a172a1a&x-expires=1776817134&x-signature=QuI2yLPUSlk7INZ1JiR1HtJmiIk%3D" },
-    { id:43, name:"", brand:"Rolex", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/24ffc44067984eba9d76415e564d6baf.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150818538A141C594527AE1E8FB9&rrcfp=8a172a1a&x-expires=1776817134&x-signature=aXoccgImigMGA1%2FBOGviuXTmcU4%3D" },
-    { id:44, name:"", brand:"Rolex", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/100eec76a10142ac88da9efed1d2c560.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150818538A141C594527AE1E8FB9&rrcfp=8a172a1a&x-expires=1776817134&x-signature=xVyJAiXentYCBE5CdmfJ02D5ki8%3D" },
-    { id:45, name:"", brand:"Rolex", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/c1c9a738f4a7441bbbc3e1b840fb2371.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150818538A141C594527AE1E8FB9&rrcfp=8a172a1a&x-expires=1776817134&x-signature=5MdRZCQI8zm5epGpUhRya%2FU7wwo%3D" },
-    { id:46, name:"", brand:"Rolex", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/cd02729c4f744cacbf611d94916c48c2.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150818538A141C594527AE1E8FB9&rrcfp=8a172a1a&x-expires=1776817134&x-signature=Nv0SqqZ6g13eQ3BwLLtG0sU%2FQBI%3D" },
-    { id:47, name:"", brand:"Rolex", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/b7be65fbd3504fddbd2b9dfeb0143585.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415083218679E1BF9D67CB297B280&rrcfp=8a172a1a&x-expires=1776817939&x-signature=Gg%2BbaTeWG6dOrG4uDoqDbaYX8SI%3D" },
-    { id:48, name:"", brand:"Rolex", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/1057b13bfaab4362a114c2610471cad2.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415083218679E1BF9D67CB297B280&rrcfp=8a172a1a&x-expires=1776817939&x-signature=GlVzH24YvP19fAPKkgJB7dRazUg%3D" },
-    { id:49, name:"", brand:"Rolex", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/eb3a60f1c9f84290bdc2abba0c0c9f9c.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415083218679E1BF9D67CB297B280&rrcfp=8a172a1a&x-expires=1776817939&x-signature=4BDEaZPiYSnrvHPRkBWKxugAzFI%3D" },
-    { id:50, name:"", brand:"Rolex", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/4763571d581a45a280227300808303fd.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415083218679E1BF9D67CB297B280&rrcfp=8a172a1a&x-expires=1776817939&x-signature=J8Uj1Q931bAh9rB%2FcfJxrh7rLlI%3D" },
-    { id:51, name:"", brand:"Rolex", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/a4ec33b8e67e41df8dba8d2748db6bd6.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415083218679E1BF9D67CB297B280&rrcfp=8a172a1a&x-expires=1776817939&x-signature=Lv7G5mvyzLcjeN%2BH7Ondlkoyf4Q%3D" },
-    { id:52, name:"", brand:"Rolex", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/e2b2de3f7bda4355b341f48aceada3f8.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415083218679E1BF9D67CB297B280&rrcfp=8a172a1a&x-expires=1776817939&x-signature=5Yi%2F1IVyI8Ql17zEWViukWuASdA%3D" },
-    { id:53, name:"", brand:"Rolex", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/e82d370a597341ce99ac0744ead6d50e.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415083218679E1BF9D67CB297B280&rrcfp=8a172a1a&x-expires=1776817939&x-signature=C5BiwcJLmQSHV2YN84B7bZ5xXzc%3D" },
-    { id:54, name:"", brand:"Rolex", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/cb7c3f01a0d84a5b934a7f93b47bb13d.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415083218679E1BF9D67CB297B280&rrcfp=8a172a1a&x-expires=1776817939&x-signature=AnlpqBSZRX2wTRvGABea7KofO%2FE%3D" },
-    { id:55, name:"", brand:"Rolex", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/45e04a30d88745fa922082303a163ca8.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415083218679E1BF9D67CB297B280&rrcfp=8a172a1a&x-expires=1776817939&x-signature=ZGZjQIiaYpyQ%2FSEgMXGUJgKmce8%3D" },
-    { id:56, name:"", brand:"Rolex", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/5219658150e54c078a7c1afe0f109c7b.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415085352BC1671B1F0D173AA9D9E&rrcfp=8a172a1a&x-expires=1776819232&x-signature=q1jj3CnGE%2F1YcXYAdXlGo3Q51Ms%3D" },
-    { id:57, name:"", brand:"Rolex", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/344522fa8f4d48a6adddc95e45883bc3.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415085352BC1671B1F0D173AA9D9E&rrcfp=8a172a1a&x-expires=1776819232&x-signature=kxzw3vjH9qer3v90Ng%2Fb8rl7tJQ%3D" },
-    { id:58, name:"", brand:"Rolex", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/38d612b6495a485abcb4528bc9fcd3c8.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415085352BC1671B1F0D173AA9D9E&rrcfp=8a172a1a&x-expires=1776819232&x-signature=MpENCxFNtI69GZY3ex2skfgqJqk%3D" },
-    { id:59, name:"", brand:"Rolex", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f19a42412d4647e7890aa42c5a6b40ed.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415085352BC1671B1F0D173AA9D9E&rrcfp=8a172a1a&x-expires=1776819232&x-signature=%2FDM6C9qDj9RJlSqPiAG04t5JSnM%3D" },
-    { id:60, name:"", brand:"Rolex", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/e6cb0aec21cd45458a30c401195dc76f.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415085352BC1671B1F0D173AA9D9E&rrcfp=8a172a1a&x-expires=1776819232&x-signature=uG71PKmNPJ%2Bt5srBV0FmEdg8zk8%3D" },
-    { id:61, name:"", brand:"Rolex", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/6189a667a058484e81fe3d54367b5a93.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415085352BC1671B1F0D173AA9D9E&rrcfp=8a172a1a&x-expires=1776819232&x-signature=fexVtZAfp%2FgICZSiqE8tXVbfrA4%3D" },
-    { id:62, name:"", brand:"Rolex", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/98affe0542dc47048cfb671e53e24f61.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415085352BC1671B1F0D173AA9D9E&rrcfp=8a172a1a&x-expires=1776819232&x-signature=xtTg%2BdR%2F7NYr7EzOcZ4N2EaNdhU%3D" },
-    { id:63, name:"", brand:"Rolex", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/0dd20effb19f49458aa5c32213f667cb.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415085352BC1671B1F0D173AA9D9E&rrcfp=8a172a1a&x-expires=1776819232&x-signature=ZxmAeqT3wXbjKdkEucyDrbZEGYU%3D" },
-    { id:64, name:"", brand:"Rolex", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/918f96596d7843cd993110414df5fb2c.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415085352BC1671B1F0D173AA9D9E&rrcfp=8a172a1a&x-expires=1776819232&x-signature=8H5VIoOKmb6wRo4FC50nP0eY8wk%3D" },
-    
-    // Patek Philippe 45
-    { id:65, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/5725253ddacc49879788229ab29bd39a.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150908438ACA32B9FCA2983EA4F2&rrcfp=8a172a1a&x-expires=1776820123&x-signature=Yh21u2uLRQDCw%2BaJgQFRBeF6sBQ%3D" },
-    { id:66, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/85cd425e40094fabb50e184fd1983c38.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150908438ACA32B9FCA2983EA4F2&rrcfp=8a172a1a&x-expires=1776820123&x-signature=7NClJKiFwvxXvGq3ao4LvsN3eDU%3D" },
-    { id:67, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/2bf41960dc194b1181a686805221af35.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150908438ACA32B9FCA2983EA4F2&rrcfp=8a172a1a&x-expires=1776820123&x-signature=yXXJ8dMDKMNexc2i%2F2o4wMBFwic%3D" },
-    { id:68, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/73edb6d9661443db8cf2d2f91acf54bb.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150908438ACA32B9FCA2983EA4F2&rrcfp=8a172a1a&x-expires=1776820123&x-signature=vv4WcMcOzLn366J8jiP4CITs09E%3D" },
-    { id:69, name:"", brand:"Patek Philippe", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/e47defa97e8145beaf21b1c0b1b9b060.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150908438ACA32B9FCA2983EA4F2&rrcfp=8a172a1a&x-expires=1776820123&x-signature=z%2FpK8Av85VEWgN1820GonnI7s30%3D" },
-    { id:70, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/b5bc20b0ee7e4ea5ba70886bd0f5b238.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150908438ACA32B9FCA2983EA4F2&rrcfp=8a172a1a&x-expires=1776820123&x-signature=R%2FxkXn0WqRgXVLY34SBY4DoNHBw%3D" },
-    { id:71, name:"", brand:"Patek Philippe", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/b4d67439de334db4bdad9b60dbf21b21.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150908438ACA32B9FCA2983EA4F2&rrcfp=8a172a1a&x-expires=1776820123&x-signature=XpcpqyspyFUr%2F1Ijp%2Bz8D4pqbOU%3D" },
-    { id:72, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/fa2c1c9e3c704e5aaa5b5e3718b65dba.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150908438ACA32B9FCA2983EA4F2&rrcfp=8a172a1a&x-expires=1776820123&x-signature=Yyrg3xlkvoOgU8F%2BrjNjcbfZp1U%3D" },
-    { id:73, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/2533a565813047588ef9d31ac71da3f5.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604150908438ACA32B9FCA2983EA4F2&rrcfp=8a172a1a&x-expires=1776820123&x-signature=Hfc1pWPrRZTkWi1hEGteSvViSjc%3D" },
-    { id:74, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/4daf07cc57534378a4e1001ae62544ca.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415091434E7C0F7820599B62D61FC&rrcfp=8a172a1a&x-expires=1776820475&x-signature=a8QHsAmtMRpi6jSvRGyCIe0uZUo%3D" },
-    { id:75, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/fc9da2b6dc2d46599c0630a159c79c9b.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415091434E7C0F7820599B62D61FC&rrcfp=8a172a1a&x-expires=1776820475&x-signature=iJT0DTySJ3mvhHiCPNqT4aMfcZM%3D" },
-    { id:76, name:"", brand:"Patek Philippe", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/293d848f712547ac8a2dfe1cfd2e13a8.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415091434E7C0F7820599B62D61FC&rrcfp=8a172a1a&x-expires=1776820475&x-signature=CilmPvBtHxrKDeCYyQDZYe5zIJA%3D" },
-    { id:77, name:"", brand:"Patek Philippe", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/4905e89353b649d5acaa74a9a44f5736.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415091434E7C0F7820599B62D61FC&rrcfp=8a172a1a&x-expires=1776820475&x-signature=jGdOuQ8EpZQEyocVWyYErD6xT%2FA%3D" },
-    { id:78, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/6b7cb03a2640437d9e4c651563f2591c.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415091434E7C0F7820599B62D61FC&rrcfp=8a172a1a&x-expires=1776820475&x-signature=GcTffwX9QGb1QFRxfeuFW0UY%2BIM%3D" },
-    { id:79, name:"", brand:"Patek Philippe", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/a09d2732c7484d2db974d447fbc3dc8d.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415091434E7C0F7820599B62D61FC&rrcfp=8a172a1a&x-expires=1776820475&x-signature=cTwBJS84gVqreklKCjUjF1woOPQ%3D" },
-    { id:80, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/4c848afb35ce415cbc31d5bfbea1ef3a.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415091434E7C0F7820599B62D61FC&rrcfp=8a172a1a&x-expires=1776820475&x-signature=ZaEoCzJQ8YFyZd1d%2F19DJdw52v4%3D" },
-    { id:81, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/7687072b96e04576ab9bd77554c06f48.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415091434E7C0F7820599B62D61FC&rrcfp=8a172a1a&x-expires=1776820475&x-signature=ScNQOJra9uXNNGe2mTZORccVMLc%3D" },
-    { id:82, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/b322bc5a8c6646a4acb2009d0a9a337b.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260415091434E7C0F7820599B62D61FC&rrcfp=8a172a1a&x-expires=1776820475&x-signature=%2BUkFzlZm3UZJTFuyUHrTBYy2XPs%3D" },
-    { id:83, name:"", brand:"Patek Philippe", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/bc2feed6c50e42c5856ca7e07ce396b0.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151026332C17658F7496BB1BCD3E&rrcfp=8a172a1a&x-expires=1776824793&x-signature=Q0QwF%2FBLYV%2FpDx4nHCn5f2R4Vnk%3D" },
-    { id:84, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/10768491d4fe4cfea2968097b9a1e6e6.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151026332C17658F7496BB1BCD3E&rrcfp=8a172a1a&x-expires=1776824793&x-signature=GYAzvwS%2Fpkg2dPw%2Boy8hj01xCKI%3D" },
-    { id:85, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/a3a97b76d035441eabc7fbd894de2e18.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151026332C17658F7496BB1BCD3E&rrcfp=8a172a1a&x-expires=1776824793&x-signature=hE7knk0VdVuSQ4MywnrLzAtb5lk%3D" },
-    { id:86, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/0bff5a6925fc4c68b204df66005d94b5.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151026332C17658F7496BB1BCD3E&rrcfp=8a172a1a&x-expires=1776824793&x-signature=k3OrmB%2BjXm6TKO0tDvK%2F5wvKldg%3D" },
-    { id:87, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/cc9523d8800545639afa7b5628975013.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151026332C17658F7496BB1BCD3E&rrcfp=8a172a1a&x-expires=1776824793&x-signature=rmKCN%2BS6QbsLwxusT2FHNQU061E%3D" },
-    { id:88, name:"", brand:"Patek Philippe", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/6c119ff25bea4796a1b2101c6ad8c1ee.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151026332C17658F7496BB1BCD3E&rrcfp=8a172a1a&x-expires=1776824793&x-signature=CH2ckK3GaMhfCi639xih76aV9P4%3D" },
-    { id:89, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/430d1874c3894a0cb5c30cb482c61664.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151026332C17658F7496BB1BCD3E&rrcfp=8a172a1a&x-expires=1776824793&x-signature=e%2B7S7uaQocopPt%2FRA9HvBe3co1g%3D" },
-    { id:90, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/56db2557f37c40f38113c4e19627099e.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151026332C17658F7496BB1BCD3E&rrcfp=8a172a1a&x-expires=1776824793&x-signature=xi%2BaXr%2BI1bDhD%2FVC%2FbwlZIjulPU%3D" },
-    { id:91, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/14d622f8f05640d6a4f465dc7b47b85c.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151026332C17658F7496BB1BCD3E&rrcfp=8a172a1a&x-expires=1776824793&x-signature=d3IrR13K%2BxpBWp45zgQUSo7i4%2F4%3D" },
-    { id:92, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/6719da1188a047abbee1f4980d9acb44.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151034260D21CF849FB0859A1C26&rrcfp=8a172a1a&x-expires=1776825266&x-signature=O2%2BlZ79mBARGtGld3wmrcjnYllY%3D" },
-    { id:93, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/8ae95e8034364873b31ba65f7ece6761.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151034260D21CF849FB0859A1C26&rrcfp=8a172a1a&x-expires=1776825266&x-signature=qXppGyProV%2FpmeRO3mxrq375hfE%3D" },
-    { id:94, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/b0daf11f81944cb3aebc7d9aaedcc0b9.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151034260D21CF849FB0859A1C26&rrcfp=8a172a1a&x-expires=1776825266&x-signature=Hg%2BJzTEDyRpWptfGAK8Y%2FDMUW8Y%3D" },
-    { id:95, name:"", brand:"Patek Philippe", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f871c9b5e5e345e68a36a81181174965.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151034260D21CF849FB0859A1C26&rrcfp=8a172a1a&x-expires=1776825266&x-signature=V7%2BRa0NfO8kBEP5a95g9rmJV8rE%3D" },
-    { id:96, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f338b29222f24b0db4205179c888c6f3.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151034260D21CF849FB0859A1C26&rrcfp=8a172a1a&x-expires=1776825266&x-signature=tF9mulsIDW2s9oTETWlU1BOjYI0%3D" },
-    { id:97, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/ed7ba2e0d0a74fb3b6eb2a56a6439f49.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151034260D21CF849FB0859A1C26&rrcfp=8a172a1a&x-expires=1776825266&x-signature=Adj%2FaLCYMzVsUXTqmzFmYgDdKC4%3D" },
-    { id:98, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/c91be522fcac4213b02c79b7a81e080c.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151034260D21CF849FB0859A1C26&rrcfp=8a172a1a&x-expires=1776825266&x-signature=DPptRcwGdTr%2B5EdVdrnWx8SxI0w%3D" },
-    { id:99, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/8ed13f9f5c564123bc6daa9b4a29e83f.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151034260D21CF849FB0859A1C26&rrcfp=8a172a1a&x-expires=1776825266&x-signature=IAecSUeO2PSrkftK8wiYlZqeTqM%3D" },
-    { id:100, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/8f52a37891c1470d89b045154a68b0cb.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604151034260D21CF849FB0859A1C26&rrcfp=8a172a1a&x-expires=1776825266&x-signature=EZSPa5L%2FnXd0L%2BtZPPnYo9L3uMo%3D" },
-    { id:101, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f6642203375848afa820753c536247cb.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041510424324FEF56C15F98EB0E7BE&rrcfp=8a172a1a&x-expires=1776825763&x-signature=dRL%2BHVCpb3%2F2WcN9lPNve%2Bnf4wE%3D" },
-    { id:102, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d468bfc66e024374ab5c3aae9ae67daa.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041510424324FEF56C15F98EB0E7BE&rrcfp=8a172a1a&x-expires=1776825763&x-signature=Pu9gG8UT9micAFdpUzXMDI93STM%3D" },
-    { id:103, name:"", brand:"Patek Philippe", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/af5ccfd2ca29460cb37e3098babb9c03.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041510424324FEF56C15F98EB0E7BE&rrcfp=8a172a1a&x-expires=1776825763&x-signature=0fgIoqY7%2FgojCqkq8%2FH1urnPeGY%3D" },
-    { id:104, name:"", brand:"Patek Philippe", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/a689e862b3f54749a5e32cfa0db38ceb.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041510424324FEF56C15F98EB0E7BE&rrcfp=8a172a1a&x-expires=1776825763&x-signature=xeU21BwTmHWFOTWEB8Sclpm2vHo%3D" },
-    { id:105, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/80a536173e7e4a51ab33a7e9bbd0a130.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041510424324FEF56C15F98EB0E7BE&rrcfp=8a172a1a&x-expires=1776825763&x-signature=5ua8xUshygfGeWH3Sz6jhs7KDFM%3D" },
-    { id:106, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/220b3c87eea349f1843f2721097cddd8.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041510424324FEF56C15F98EB0E7BE&rrcfp=8a172a1a&x-expires=1776825763&x-signature=5hsuvyOS8EROeNx%2B%2BGnBmZg78uo%3D" },
-    { id:107, name:"", brand:"Patek Philippe", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/9f88f58c625e4f018e9f4343be884c00.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041510424324FEF56C15F98EB0E7BE&rrcfp=8a172a1a&x-expires=1776825763&x-signature=50gH2coutjUsQA98fThVZ6wqYX8%3D" },
-    { id:108, name:"", brand:"Patek Philippe", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/cc30c46f68c24f59a64cf9c22a75597d.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041510424324FEF56C15F98EB0E7BE&rrcfp=8a172a1a&x-expires=1776825763&x-signature=86ACEB%2FUn3q56JyyPV0yGqyH%2Bus%3D" },
-    { id:109, name:"", brand:"Patek Philippe", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/c7c850ff3d184d9c8ecc5cb58d8a4ad7.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041510424324FEF56C15F98EB0E7BE&rrcfp=8a172a1a&x-expires=1776825763&x-signature=OlvjfO4ImcCnQ5MU5eV3lUrIhoE%3D" },
-    
-    // Longines 11 (removed the first image, original id:110 deleted)
-    { id:111, name:"", brand:"Longines", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/86828b98e95d4c22a93f15257a61ea5b.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160014171A6D850DDECADAE35039&rrcfp=8a172a1a&x-expires=1776874457&x-signature=ItkS8JnJGd6D46ePfh857I6hRyg%3D" },
-    { id:112, name:"", brand:"Longines", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d275c618b1e9432cae04a661ec2b4d29.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160014171A6D850DDECADAE35039&rrcfp=8a172a1a&x-expires=1776874457&x-signature=zzgdOd6ho5ClZ9uy%2FLM0ptrwcXc%3D" },
-    { id:113, name:"", brand:"Longines", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/0b4b091f1a034b61ba89d82d1b95ac1f.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160014171A6D850DDECADAE35039&rrcfp=8a172a1a&x-expires=1776874457&x-signature=hIeYs1WRS%2BuSYTk73s3ZQgihOmY%3D" },
-    { id:114, name:"", brand:"Longines", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/dea616f8079d468389b865c842b3efd0.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160014171A6D850DDECADAE35039&rrcfp=8a172a1a&x-expires=1776874457&x-signature=G28C9zOA2TLrEHjnYhaou0rNi2I%3D" },
-    { id:115, name:"", brand:"Longines", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/94b304f945284dd1be20b46760b8ee72.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160014171A6D850DDECADAE35039&rrcfp=8a172a1a&x-expires=1776874457&x-signature=XYq%2BRcpJ0%2B328MJiPQJqEmqqZyQ%3D" },
-    { id:116, name:"", brand:"Longines", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/7f78a27627ad400eb5342a99825ec874.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160014171A6D850DDECADAE35039&rrcfp=8a172a1a&x-expires=1776874457&x-signature=kg%2BlNhVITgiauNN7IN8POBYzEUU%3D" },
-    { id:117, name:"", brand:"Longines", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/72ae9e259de046d9829a959f48ce9680.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160014171A6D850DDECADAE35039&rrcfp=8a172a1a&x-expires=1776874457&x-signature=lvmr%2FZ%2BC6DzCVZwPrJq%2FPQJz5l8%3D" },
-    { id:118, name:"", brand:"Longines", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/6bacdcfb3b824ecdb9579c15afb2c600.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160014171A6D850DDECADAE35039&rrcfp=8a172a1a&x-expires=1776874457&x-signature=vMWGlldZg1bfq1orySW3EW2pLC4%3D" },
-    { id:119, name:"", brand:"Longines", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/bb42a65f442f4b7a9b325b89cc9318fc.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160021282787163F89C3CBD80946&rrcfp=8a172a1a&x-expires=1776874888&x-signature=VlJ0C757AewpddHUYjKiD70v%2ByI%3D" },
-    { id:120, name:"", brand:"Longines", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d4d9e12ba45740e6a40abecc1b43af4d.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160021282787163F89C3CBD80946&rrcfp=8a172a1a&x-expires=1776874888&x-signature=ZAR6yYtfrR9QV3zR40aNlVD31dg%3D" },
-    { id:121, name:"", brand:"Longines", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/554aec2546f645b9bd9ebd6922697d39.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160021282787163F89C3CBD80946&rrcfp=8a172a1a&x-expires=1776874888&x-signature=dPJp5zTwVA%2F5aKM%2FkHPokXzw%2Ftw%3D" },
-    
-    // Omega 13
-    { id:122, name:"", brand:"Omega", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/fb8c9691dbe74f88974277e9bb62ce9c.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041600594889838298EC821ED687F0&rrcfp=8a172a1a&x-expires=1776877189&x-signature=bynCH4YVZAWMBUG40qA3AH%2BVuMQ%3D" },
-    { id:123, name:"", brand:"Omega", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/5026f7b7d98c4e50a1691e44fe18a4dc.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041600594889838298EC821ED687F0&rrcfp=8a172a1a&x-expires=1776877189&x-signature=cnPGJFRkDT4Fyn3As%2B7rD%2Bgfe7g%3D" },
-    { id:124, name:"", brand:"Omega", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/e2ac5f9a2edf4e3d9ab3960da9831385.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041600594889838298EC821ED687F0&rrcfp=8a172a1a&x-expires=1776877189&x-signature=qntg%2BONwBw8QQGS%2BGzI7ZqAEkUc%3D" },
-    { id:125, name:"", brand:"Omega", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/4e0dcb0dfb204ecf930e91d61be50040.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041600594889838298EC821ED687F0&rrcfp=8a172a1a&x-expires=1776877189&x-signature=rkwRqfwYkehiu0H%2FDyaUCAtnbQs%3D" },
-    { id:126, name:"", brand:"Omega", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/e314e2c0e0d742e4b7fb8e3ee2e5bfef.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041600594889838298EC821ED687F0&rrcfp=8a172a1a&x-expires=1776877189&x-signature=Dhy7G2YKNvyQ6Nt%2FfZYiIyZufMc%3D" },
-    { id:127, name:"", brand:"Omega", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/ce8a50b6dfe04084bfe967ea7ecba2bc.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041600594889838298EC821ED687F0&rrcfp=8a172a1a&x-expires=1776877189&x-signature=oqi%2FdxICFMeeqg3VGEtu4e9S4LE%3D" },
-    { id:128, name:"", brand:"Omega", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/27aae5ee0ce34000b0828190da9d7d12.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041600594889838298EC821ED687F0&rrcfp=8a172a1a&x-expires=1776877189&x-signature=i5iVelpy1uNlah3QVs%2FGbYywL68%3D" },
-    { id:129, name:"", brand:"Omega", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/ff84fd51cef745778218ab0801868de9.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041600594889838298EC821ED687F0&rrcfp=8a172a1a&x-expires=1776877189&x-signature=Cybyj%2BXCf%2BOhWW1uMX7sJuNcRfE%3D" },
-    { id:130, name:"", brand:"Omega", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/690d7738fe0e4ab18a9aa7dcb47e6ce7.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041600594889838298EC821ED687F0&rrcfp=8a172a1a&x-expires=1776877189&x-signature=%2F1yGR%2F98fgIblXUMDTX0BYBYndI%3D" },
-    { id:131, name:"", brand:"Omega", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f5683172bb0a4823bb5a4ce969b5475b.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416010659F4176D74B4037F93EC45&rrcfp=8a172a1a&x-expires=1776877620&x-signature=b35uEBLwEZLTcZ2%2BgCPigHdle0w%3D" },
-    { id:132, name:"", brand:"Omega", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/119144f996334cb7945c88466da412b5.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416010659F4176D74B4037F93EC45&rrcfp=8a172a1a&x-expires=1776877620&x-signature=8POKr%2FvytFUX5W%2Bt0CdOetuhNU4%3D" },
-    { id:133, name:"", brand:"Omega", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/481ec161dd42445ba5445ac21480639c.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416010659F4176D74B4037F93EC45&rrcfp=8a172a1a&x-expires=1776877620&x-signature=m7%2FZnhX1%2FdjFdtkcemfp04JFVto%3D" },
-    { id:134, name:"", brand:"Omega", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/e1a832f30136499bb72c598ee0a2634c.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416010659F4176D74B4037F93EC45&rrcfp=8a172a1a&x-expires=1776877620&x-signature=8GgAoxRkxSMPHTTY0VBQsovyCgM%3D" },
-    
-    // IWC 12
-    { id:135, name:"", brand:"IWC", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d1d36035d9bd487798cc0fea08c56858.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160141317112C65A2B19C9DF2409&rrcfp=8a172a1a&x-expires=1776879691&x-signature=kXKSIoLeUGdJhxInt%2Bh0Ykdd%2FTA%3D" },
-    { id:136, name:"", brand:"IWC", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f08688422a804b90b40f74b8f90d74f6.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160141317112C65A2B19C9DF2409&rrcfp=8a172a1a&x-expires=1776879691&x-signature=kaxRZcucLxTezKaVxQfw%2Bly0jUQ%3D" },
-    { id:137, name:"", brand:"IWC", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/652530913fd240148fdc5c944751ce07.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160141317112C65A2B19C9DF2409&rrcfp=8a172a1a&x-expires=1776879691&x-signature=UJnY2pEWhzP%2FgNAmS0o8T2pGBeU%3D" },
-    { id:138, name:"", brand:"IWC", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/b36a4f37c6934919ae680f4f4924f107.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160141317112C65A2B19C9DF2409&rrcfp=8a172a1a&x-expires=1776879691&x-signature=C6BfUDT%2BRdF6yIn%2B8FOYFvykWF8%3D" },
-    { id:139, name:"", brand:"IWC", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/ed9bca737253489b80a82c1738bf12bb.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160141317112C65A2B19C9DF2409&rrcfp=8a172a1a&x-expires=1776879691&x-signature=3gtYuCAx%2Fqe1CFmILvT7w%2FrMRY8%3D" },
-    { id:140, name:"", brand:"IWC", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/475398a8c79a49aa9e601ddc89ce5af8.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160141317112C65A2B19C9DF2409&rrcfp=8a172a1a&x-expires=1776879691&x-signature=GjYrVdliPzFc7UNA8Lg74u0W5m8%3D" },
-    { id:141, name:"", brand:"IWC", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/445368566ad34ac898f3ab027e9be2fa.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160141317112C65A2B19C9DF2409&rrcfp=8a172a1a&x-expires=1776879691&x-signature=5n3DlkT7IutwuFBh0DTQk90qOXs%3D" },
-    { id:142, name:"", brand:"IWC", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/23f8fb2ce41f44e287cf14419db66086.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160141317112C65A2B19C9DF2409&rrcfp=8a172a1a&x-expires=1776879691&x-signature=II3or0%2BW4W4Cl3ZPx1Jq9ywip9w%3D" },
-    { id:143, name:"", brand:"IWC", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/4af9c106f4ee4fea9fa9e67bfc7c6300.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160141317112C65A2B19C9DF2409&rrcfp=8a172a1a&x-expires=1776879691&x-signature=ZP1XO9I2RjkcltYZN4IXO%2BjS6Tg%3D" },
-    { id:144, name:"", brand:"IWC", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/5d85dc09c50f44a08d3e2d8cebfb01b9.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160151081980A76B8B55D8F9AE5B&rrcfp=8a172a1a&x-expires=1776880268&x-signature=Kf9yptHGiFpC0uFcnKzIZWg%2FiQU%3D" },
-    { id:145, name:"", brand:"IWC", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f85fd3ab46364acebfc5031dc040c451.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160151081980A76B8B55D8F9AE5B&rrcfp=8a172a1a&x-expires=1776880268&x-signature=9ffAAkXTWh13IIRzs%2BRBJXzmXZs%3D" },
-    { id:146, name:"", brand:"IWC", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/2f8ce7cff2af4de29ff60f5cf12dd058.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604160151081980A76B8B55D8F9AE5B&rrcfp=8a172a1a&x-expires=1776880268&x-signature=oSoo1lx48G7H5MHk8ap9i%2F%2FP9lU%3D" },
-    
-    // Jaeger-LeCoultre 8
-    { id:147, name:"", brand:"Jaeger-LeCoultre", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/9d3fa55435b049b19b6ae95771a0baf6.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416020335BB3448201635D75636B2&rrcfp=8a172a1a&x-expires=1776881015&x-signature=flhX6zrHsxGP8vKaoZR3CX5HByI%3D" },
-    { id:148, name:"", brand:"Jaeger-LeCoultre", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/6387cfa4c12c44e880e260a5e146090a.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416020335BB3448201635D75636B2&rrcfp=8a172a1a&x-expires=1776881015&x-signature=Vxcrds5ez82YKcYJXGl6IEzowV0%3D" },
-    { id:149, name:"", brand:"Jaeger-LeCoultre", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/1800ff9c96c9414f818cf6112cb42fd7.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416020335BB3448201635D75636B2&rrcfp=8a172a1a&x-expires=1776881015&x-signature=4e0tlqGK5N1IdyOKaqWRR%2Blpe4U%3D" },
-    { id:150, name:"", brand:"Jaeger-LeCoultre", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d6da302bffa44d098ed84025e0ffed52.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416020335BB3448201635D75636B2&rrcfp=8a172a1a&x-expires=1776881015&x-signature=Tbl2kP78x3dkVt%2BEIpqmpCo1x5Q%3D" },
-    { id:151, name:"", brand:"Jaeger-LeCoultre", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/508e1a20740940c7b294fded76d072fe.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416020335BB3448201635D75636B2&rrcfp=8a172a1a&x-expires=1776881015&x-signature=xxUkz5puBxV%2FpH4gyqDwasWFHVE%3D" },
-    { id:152, name:"", brand:"Jaeger-LeCoultre", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d9619dd9c62c410dac0f956cd72e86ea.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416020335BB3448201635D75636B2&rrcfp=8a172a1a&x-expires=1776881015&x-signature=l%2BISOYHzYwPtDV369be1iHqVngk%3D" },
-    { id:153, name:"", brand:"Jaeger-LeCoultre", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f591a181b1244c6f9b3a2dca8ab05409.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416020335BB3448201635D75636B2&rrcfp=8a172a1a&x-expires=1776881015&x-signature=WjGQp667c4HbK%2Ff4Ay%2F4l6cZ3Nw%3D" },
-    { id:154, name:"", brand:"Jaeger-LeCoultre", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/509c46e4ddbe4e7a9d25e79405763aea.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416020335BB3448201635D75636B2&rrcfp=8a172a1a&x-expires=1776881015&x-signature=vesRcr8Jl3RDXr6TEJexvITZSRs%3D" },
-    
-    // Audemars Piguet 4
-    { id:155, name:"", brand:"Audemars Piguet", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/95be80849331474f86828ea6ef986a36.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416022920A60B43867EB3DA78DAC8&rrcfp=8a172a1a&x-expires=1776882561&x-signature=6OGjWBMcfO9EGRWamv7fVjfPnVE%3D" },
-    { id:156, name:"", brand:"Audemars Piguet", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d309504aec4f4b719b99905f76938324.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416022920A60B43867EB3DA78DAC8&rrcfp=8a172a1a&x-expires=1776882561&x-signature=XdkXUh%2FlucDdflZkvYTNRqnKs7U%3D" },
-    { id:157, name:"", brand:"Audemars Piguet", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/294f43d38f1441f1b5e8ae283fdac5a0.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416022920A60B43867EB3DA78DAC8&rrcfp=8a172a1a&x-expires=1776882561&x-signature=Q5sE4HdoaMVSqMOH6Jwoki%2BEY70%3D" },
-    { id:158, name:"", brand:"Audemars Piguet", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/04b6a17ff52b4baca2578f14cc10687f.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260416022920A60B43867EB3DA78DAC8&rrcfp=8a172a1a&x-expires=1776882561&x-signature=9AgLqFI9CjX8dFiCiRYVDFM4%2Bio%3D" },
-    
-    // Richard Mille 7
-    { id:159, name:"", brand:"Richard Mille", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/7ca36a8cfc93437089d6e648cc85ebf7.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704112766A2B45A7C82255161D8&rrcfp=8a172a1a&x-expires=1776975087&x-signature=LGbIc%2Bfl8r17GQ8fMCEfnFO8nwU%3D" },
-    { id:160, name:"", brand:"Richard Mille", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/9218203b893448d0b72e37d8fcbf6a88.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704112766A2B45A7C82255161D8&rrcfp=8a172a1a&x-expires=1776975087&x-signature=VBrhXJzd0PYyERdsafxVNUTLfWM%3D" },
-    { id:161, name:"", brand:"Richard Mille", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d4ac3ec6cadf4f21aa92b67e1d82df08.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704112766A2B45A7C82255161D8&rrcfp=8a172a1a&x-expires=1776975087&x-signature=l7cu6AuUxnmfvnaPutZA7bc9D38%3D" },
-    { id:162, name:"", brand:"Richard Mille", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/41ca1ea25f164096b414bd2deb2b7cc4.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704112766A2B45A7C82255161D8&rrcfp=8a172a1a&x-expires=1776975087&x-signature=ypN3VsyYyvT%2BciaudIo1m0Gwrv4%3D" },
-    { id:163, name:"", brand:"Richard Mille", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/ce870a6a534f4982a5258caa110dc352.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704112766A2B45A7C82255161D8&rrcfp=8a172a1a&x-expires=1776975087&x-signature=BebqlagiOZe4isoLYIzZVqxIcYg%3D" },
-    { id:164, name:"", brand:"Richard Mille", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/eb0ed91324d14bb7865410230abd2182.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704112766A2B45A7C82255161D8&rrcfp=8a172a1a&x-expires=1776975087&x-signature=vfr%2BqTFOa2J530%2BDpHGlw8IboA0%3D" },
-    { id:165, name:"", brand:"Richard Mille", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/c229c3ab1ff74c1e8903af140d98125c.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704112766A2B45A7C82255161D8&rrcfp=8a172a1a&x-expires=1776975087&x-signature=UuEPrz8z%2FUfIv292c5y6U9WpCL4%3D" },
-    
-    // LV 45
-    { id:166, name:"", brand:"LV", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/ae1a192a72c442f8bdb61ac80fd90e2f.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417042155E35E49671787473FF3E8&rrcfp=8a172a1a&x-expires=1776975716&x-signature=0Rb0qnwXytZO0hB5PfTMSRiDqlo%3D" },
-    { id:167, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/1472900c49084a689c1f1a3e63bfbe18.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417042155E35E49671787473FF3E8&rrcfp=8a172a1a&x-expires=1776975716&x-signature=BBQafsL%2BwSEkO9XLiQBTmOpmmaI%3D" },
-    { id:168, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/2f11e2f547e949958f00334f4893b9cd.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417042155E35E49671787473FF3E8&rrcfp=8a172a1a&x-expires=1776975716&x-signature=idngBuAEV5te2TH40T%2BvC7mViUk%3D" },
-    { id:169, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/7e3a05e767c34175b0d64f21ed9472de.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417042155E35E49671787473FF3E8&rrcfp=8a172a1a&x-expires=1776975716&x-signature=mVM7%2BMPgNWDDPMxO%2Fd5bvu7FR8Y%3D" },
-    { id:170, name:"", brand:"LV", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/9f5d3529edf74f588d1cbba5a68e804a.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417042155E35E49671787473FF3E8&rrcfp=8a172a1a&x-expires=1776975716&x-signature=Q8NMbWWObEpAp9H4SYElvQZuSPg%3D" },
-    { id:171, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/305c6fb63d3a4845aa8fe958e6038774.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417042155E35E49671787473FF3E8&rrcfp=8a172a1a&x-expires=1776975716&x-signature=4DxfpDfoHVeEVW1HxLTPfol%2BjA4%3D" },
-    { id:172, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/9b7a1dfcc21a4cfaac8b1e5a52c91870.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417042155E35E49671787473FF3E8&rrcfp=8a172a1a&x-expires=1776975716&x-signature=Ab1Pd0ALxeaZyCnwVnJWfy2UvMQ%3D" },
-    { id:173, name:"", brand:"LV", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/a20e8d24228b4ca4a064121d076da7e5.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417042155E35E49671787473FF3E8&rrcfp=8a172a1a&x-expires=1776975716&x-signature=j4v%2FTStETiyZ83x%2BUcbJAfshLDA%3D" },
-    { id:174, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/4c2089975f9e4e89a84a066e1db43d4b.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417042155E35E49671787473FF3E8&rrcfp=8a172a1a&x-expires=1776975716&x-signature=aFyzxAnsaGx7T9GjxB943SM2qiY%3D" },
-    { id:175, name:"", brand:"LV", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/879439a86ac94a5c9a9fb0e9cac08ea4.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417042155E35E49671787473FF3E8&rrcfp=8a172a1a&x-expires=1776975716&x-signature=x%2BVCTvUQNgID8hOJMvqDA9o8x44%3D" },
-    { id:176, name:"", brand:"LV", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/cb40ffc26f2a4bf4af02efef1584ca3f.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704302076514ABDE0988C75CA80&rrcfp=8a172a1a&x-expires=1776976220&x-signature=qOg2%2FOtianYIMPBQy897eSLj0gw%3D" },
-    { id:177, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/22e179f6b1c3437fbb0bd4ec466631ba.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704302076514ABDE0988C75CA80&rrcfp=8a172a1a&x-expires=1776976220&x-signature=ChrKZ6ilZVs8RlSZUZhK9X5FG0o%3D" },
-    { id:178, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/baa8ce9518ef44f28ea982407d5cf557.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704302076514ABDE0988C75CA80&rrcfp=8a172a1a&x-expires=1776976220&x-signature=IpV59eiaPYqUyktXMWMmgkunjWk%3D" },
-    { id:179, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/6363e5484d514fcc8f1518755d6dcc07.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704302076514ABDE0988C75CA80&rrcfp=8a172a1a&x-expires=1776976220&x-signature=%2FNnrIR59OrlqqbOV95mL3%2BDk9Bg%3D" },
-    { id:180, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/68a8fc07170e42e6963e9090a985e386.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704302076514ABDE0988C75CA80&rrcfp=8a172a1a&x-expires=1776976220&x-signature=Ztfy7fKPupUmOTkX8yFVxsqWhA0%3D" },
-    { id:181, name:"", brand:"LV", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/aeffff9b2ad144b0b874f7d61f66b4d0.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704302076514ABDE0988C75CA80&rrcfp=8a172a1a&x-expires=1776976220&x-signature=An48vvNzLdjmU9kPYpDe8pA8lK8%3D" },
-    { id:182, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d719a2017bf54ae6b6f6f04af9a9249c.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704302076514ABDE0988C75CA80&rrcfp=8a172a1a&x-expires=1776976220&x-signature=zb90D3PnxgHu9oVMVXyv%2FTCImDY%3D" },
-    { id:183, name:"", brand:"LV", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/43c122ba925f473ca047d22f077a7df8.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704302076514ABDE0988C75CA80&rrcfp=8a172a1a&x-expires=1776976220&x-signature=3iISpTk1SSV94r%2BxxA8brOqoI7M%3D" },
-    { id:184, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/1dfc81f0a0e34aa9905c27a56955dce3.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704302076514ABDE0988C75CA80&rrcfp=8a172a1a&x-expires=1776976220&x-signature=FFtKnvuxh%2FBUVIz1RWT%2Fw8o4yu8%3D" },
-    { id:185, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/72d4cdcf8eff46a99da17de809189ecc.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043154866352B61F560F2DC286&rrcfp=8a172a1a&x-expires=1776976314&x-signature=U9WCR8l0E7hPljl2kbclo5HjYg8%3D" },
-    { id:186, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/29bc977d59b44877bafeea79532c059d.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043154866352B61F560F2DC286&rrcfp=8a172a1a&x-expires=1776976314&x-signature=sHqf68nzlkyZAyXwEX2dYud70H4%3D" },
-    { id:187, name:"", brand:"LV", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/8ac47894127942a0a079131dc56353d1.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043154866352B61F560F2DC286&rrcfp=8a172a1a&x-expires=1776976314&x-signature=A6s9l1VfQNH3vTyfXaaAT%2FD1REQ%3D" },
-    { id:188, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f067ea100e87440c9a5797be9edb281e.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043154866352B61F560F2DC286&rrcfp=8a172a1a&x-expires=1776976314&x-signature=V16R%2Bt5CNEOEwfShP9beszOTaS4%3D" },
-    { id:189, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/9c345f3b1f584ef39ac48f50e6683dd9.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043154866352B61F560F2DC286&rrcfp=8a172a1a&x-expires=1776976314&x-signature=Re6MJN9NdAV8VH83bwbanwZMiws%3D" },
-    { id:190, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f8ae5e44d76249a7ace4b3612ab06544.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043154866352B61F560F2DC286&rrcfp=8a172a1a&x-expires=1776976314&x-signature=sh1%2BRyJn3YEFHXN9bH%2Fdp5zvyfE%3D" },
-    { id:191, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/99635f8325ca43799f38a1ad672a47cc.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043154866352B61F560F2DC286&rrcfp=8a172a1a&x-expires=1776976314&x-signature=dOeMjxPPPtw4nifeR84cEitHhI4%3D" },
-    { id:192, name:"", brand:"LV", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f56fcfe08da042cd81bada37f9eee400.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043154866352B61F560F2DC286&rrcfp=8a172a1a&x-expires=1776976314&x-signature=eBXivJJzQcSgWzrUTGd66powLXw%3D" },
-    { id:193, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/1af306bf15f44888bace8f7038d85cf2.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043154866352B61F560F2DC286&rrcfp=8a172a1a&x-expires=1776976314&x-signature=hqLkCdPzZ49poGxwAGxj67TF7f0%3D" },
-    { id:194, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/a29c1750168e4fce8fc775102c6a4b70.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043154866352B61F560F2DC286&rrcfp=8a172a1a&x-expires=1776976314&x-signature=jrYqavKVn6WdFOVlKxE9KJvbD0Q%3D" },
-    { id:195, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/ef79afdb02fb4377af6104a5495bb4ff.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043224915A6246614CC823C19B&rrcfp=8a172a1a&x-expires=1776976344&x-signature=ZLKstxlVh35QofWYTv0bNZcSLyY%3D" },
-    { id:196, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/bf94a04289cf4bbaa156eef9916dd89a.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043224915A6246614CC823C19B&rrcfp=8a172a1a&x-expires=1776976344&x-signature=6OtTka%2BA4FRJLIYURDf2ZljidGA%3D" },
-    { id:197, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/dd4e504e4d3b429894339164b5e40e8d.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043224915A6246614CC823C19B&rrcfp=8a172a1a&x-expires=1776976344&x-signature=%2FT3qbJWhliZwEwe60jq6l%2FqikRc%3D" },
-    { id:198, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d3f0c9b3237145378f51f6e9b1086ddd.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043224915A6246614CC823C19B&rrcfp=8a172a1a&x-expires=1776976344&x-signature=j7TGhRRddCu%2BaOPymZIv9EUVoqI%3D" },
-    { id:199, name:"", brand:"LV", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/45d9fcaa42b4459f830342dbb4365f3d.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043224915A6246614CC823C19B&rrcfp=8a172a1a&x-expires=1776976344&x-signature=J0JdzVsf9r3wlbXQ78uSfSQbMDE%3D" },
-    { id:200, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/ffc479e28ed54edd9977ad16763b2e12.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043224915A6246614CC823C19B&rrcfp=8a172a1a&x-expires=1776976344&x-signature=25PhUeFnDs43BVlvtt86A2yVmQ8%3D" },
-    { id:201, name:"", brand:"LV", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d5b53f50988d4b77870cd70117ccbac3.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043224915A6246614CC823C19B&rrcfp=8a172a1a&x-expires=1776976344&x-signature=XUvOA8mQns6qkyNpJMn%2Ftp38x94%3D" },
-    { id:202, name:"", brand:"LV", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/45e30928dfd143e294b3bacd30193c50.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043224915A6246614CC823C19B&rrcfp=8a172a1a&x-expires=1776976344&x-signature=67ZU0byGpvWuBBxM3ltgvaePfR4%3D" },
-    { id:203, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/acfa7e1d3a1a4affb5273d40e0a5ede1.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043224915A6246614CC823C19B&rrcfp=8a172a1a&x-expires=1776976344&x-signature=899ZxCniksixCOpnbsV98L%2Fen9M%3D" },
-    { id:204, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/655dd5ffa4a84490ba7b513cf02acca8.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043224915A6246614CC823C19B&rrcfp=8a172a1a&x-expires=1776976344&x-signature=FLheeiw1eTctz38s3Od%2B53Nj%2BvE%3D" },
-    { id:205, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/6c01f4fb528541ccbdf90011a3d49006.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043255915A6246614CC823C2B4&rrcfp=8a172a1a&x-expires=1776976375&x-signature=HHNqFvbJre%2FYCeICnCl4fi6%2BJZY%3D" },
-    { id:206, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/37c1b8f15ab344178d15863f12df167c.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043255915A6246614CC823C2B4&rrcfp=8a172a1a&x-expires=1776976375&x-signature=My%2BkcxWKgJ0%2BWsoccSl7LAO9kDs%3D" },
-    { id:207, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/bdea5b7d00c44361bbbe0c30f5e883c6.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043255915A6246614CC823C2B4&rrcfp=8a172a1a&x-expires=1776976375&x-signature=6bSKzhQTvgSKOkIfLBEb462QjAg%3D" },
-    { id:208, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/915a019cda53409c926b1f4263d7187a.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043255915A6246614CC823C2B4&rrcfp=8a172a1a&x-expires=1776976375&x-signature=5%2B%2BHhH1XgG%2BW12L3gXtFZu2Phr0%3D" },
-    { id:209, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d131ebc7ad4c4adbad43e4349d365b67.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043255915A6246614CC823C2B4&rrcfp=8a172a1a&x-expires=1776976375&x-signature=sjgsj9qM5%2FGQnwiM28EmpHYTb7w%3D" },
-    { id:210, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/ee7d35cb1b164405b51617174a3cc1e0.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043255915A6246614CC823C2B4&rrcfp=8a172a1a&x-expires=1776976375&x-signature=IABsoqGLttpVpuoZ2bE0jc9%2BwlM%3D" },
-    { id:211, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/8f3c7b739e4e405e99e3f567dd40df05.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043255915A6246614CC823C2B4&rrcfp=8a172a1a&x-expires=1776976375&x-signature=zqQEgAXBRdZ0vv1xoGph1OdAxgg%3D" },
-    { id:212, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/6f11d8f4f7e14b34bc7dd4c54eb3c3d0.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043255915A6246614CC823C2B4&rrcfp=8a172a1a&x-expires=1776976375&x-signature=PqJTSjgk4UNivT2T6KH9%2BTfQcAg%3D" },
-    { id:213, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/429310a234b14e7e94115510fd391d87.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043255915A6246614CC823C2B4&rrcfp=8a172a1a&x-expires=1776976375&x-signature=rnmChy%2B1SEd1xdJmb%2F4dknshNlI%3D" },
-    { id:214, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/a2d283de036a4210a7fdea0e0a8560ff.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260417043255915A6246614CC823C2B4&rrcfp=8a172a1a&x-expires=1776976375&x-signature=4CFMAitM4NJhBbaCy7LvWvO37WI%3D" },
-    { id:215, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/27031c8cd4fd467c8970e11f8f735f8a.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704331767E30CB5A9F1C5C0B6BB&rrcfp=8a172a1a&x-expires=1776976397&x-signature=%2F%2FUQAay4F%2BcW0mx3czEMhQty2pU%3D" },
-    { id:216, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/996f8614d3d247e2a2a9132883fbe7ec.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704331767E30CB5A9F1C5C0B6BB&rrcfp=8a172a1a&x-expires=1776976397&x-signature=cECRjmm9B4Q4z2%2Byq0RA%2F7sqpsw%3D" },
-    { id:217, name:"", brand:"LV", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/ec41119322d348338d4357e6fe958ce1.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704331767E30CB5A9F1C5C0B6BB&rrcfp=8a172a1a&x-expires=1776976397&x-signature=vOfndvZVG2%2F3bRS14qovcGwtjL4%3D" },
-    { id:218, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/796b1ca7d4b7475aa2a978a6be5de48a.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704331767E30CB5A9F1C5C0B6BB&rrcfp=8a172a1a&x-expires=1776976397&x-signature=iqgRDXPuSp86rQeAc7Qh8glS3bE%3D" },
-    { id:219, name:"", brand:"LV", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/0f7ce25e7424438cb57daf1a3ff0dc48.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704331767E30CB5A9F1C5C0B6BB&rrcfp=8a172a1a&x-expires=1776976397&x-signature=nJtp0LFp%2B%2Bh5z5qeV9vtKwbGzYc%3D" },
-    { id:220, name:"", brand:"LV", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/de578cc4c1724e098172ae808dbf9a77.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041704331767E30CB5A9F1C5C0B6BB&rrcfp=8a172a1a&x-expires=1776976397&x-signature=Lq19OEOCP57RDOuA%2BTajYaHDL78%3D" },
-    
-   // Hermès items
-   { id:221, name:"", brand:"Hermès", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/96ab5d7d83a74b0bb94ffd1d01604a7e.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803301642C70C4F02CB2F38CE2A&rrcfp=8a172a1a&x-expires=1777059017&x-signature=xgkeKvh7QHfdiXuItYmsCh3INy4%3D" },
-   { id:222, name:"", brand:"Hermès", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d29cfd45ccae45a1b004a74e4e655006.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803301642C70C4F02CB2F38CE2A&rrcfp=8a172a1a&x-expires=1777059017&x-signature=5tUkCPoG4sw939I3BsFg21%2FwGRw%3D" },
-   { id:223, name:"", brand:"Hermès", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d9430f6d4e6146c3a2e70f294671f0c8.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803301642C70C4F02CB2F38CE2A&rrcfp=8a172a1a&x-expires=1777059017&x-signature=hNOBDMP1EkwWGutKax%2BYy91pHBA%3D" },
-   { id:224, name:"", brand:"Hermès", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/511c448ea4bd4bbf824b115aca1b6c29.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803301642C70C4F02CB2F38CE2A&rrcfp=8a172a1a&x-expires=1777059017&x-signature=Xo6YnnAEELAU5G6%2B4fJJWbfXew4%3D" },
-   { id:225, name:"", brand:"Hermès", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f854b2b26f444ee191b693c82ad46930.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803301642C70C4F02CB2F38CE2A&rrcfp=8a172a1a&x-expires=1777059017&x-signature=iLvvWls0uiyhVhBohTfcXT8I6i4%3D" },
-   { id:226, name:"", brand:"Hermès", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/fa718dfdb3fc44b389796b684f6055d0.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803301642C70C4F02CB2F38CE2A&rrcfp=8a172a1a&x-expires=1777059017&x-signature=nYTL79kz132%2FDUKoQ3rxrM3GAXI%3D" },
-   { id:227, name:"", brand:"Hermès", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/7183b8eacf4d4af483e115ca5568b122.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803301642C70C4F02CB2F38CE2A&rrcfp=8a172a1a&x-expires=1777059017&x-signature=iqs31N94qJIf4E9OS77NYdrbvKw%3D" },
-   { id:228, name:"", brand:"Hermès", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/3a8d050f4346486f95a180df00365f59.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803301642C70C4F02CB2F38CE2A&rrcfp=8a172a1a&x-expires=1777059017&x-signature=uwTvoOHleAJNNcwOMoT2gstqnWQ%3D" },
-   { id:229, name:"", brand:"Hermès", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/000dd56ec7864246ac4c19e8ca85618f.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803301642C70C4F02CB2F38CE2A&rrcfp=8a172a1a&x-expires=1777059017&x-signature=TLCSZn6KGVLjvQSJUJK9A2KUZME%3D" },
-   { id:230, name:"", brand:"Hermès", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f31c09062f774eb4937a1f6f52b794b8.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803301642C70C4F02CB2F38CE2A&rrcfp=8a172a1a&x-expires=1777059017&x-signature=GTo4k98K3GpbhwBj8FuU298TDG8%3D" },
-   // Chanel series (full list as originally given, unchanged)
-   { id:231, name:"", brand:"Chanel", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/9c7ff625e4bc4573a2ac3b639fe2e470.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260418035806699797CBACB36B0A932F&rrcfp=8a172a1a&x-expires=1777060687&x-signature=ocKZXZjGOVQt0VkCqjqf9ZBtoCA%3D" },
-   { id:232, name:"", brand:"Chanel", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/dd0461791d1345bbab10cdbaf560fe52.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260418035806699797CBACB36B0A932F&rrcfp=8a172a1a&x-expires=1777060687&x-signature=lblO0JmOhosjFwfVNcwJatlKVag%3D" },
-   { id:233, name:"", brand:"Chanel", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/1382a3efff994447bc89b119c2aafeb8.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260418035806699797CBACB36B0A932F&rrcfp=8a172a1a&x-expires=1777060687&x-signature=frDtTQn93hM9XkyAfB%2Foq0gr0CE%3D" },
-   { id:234, name:"", brand:"Chanel", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/521ecfa40da34ffcb52cb6b3252a3680.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260418035806699797CBACB36B0A932F&rrcfp=8a172a1a&x-expires=1777060687&x-signature=%2FX8vSgq14cezHs%2BZLreB%2BM57oZA%3D" },
-   { id:235, name:"", brand:"Chanel", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/a9aed418cca047c889fa8a99ebe82c6d.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260418035806699797CBACB36B0A932F&rrcfp=8a172a1a&x-expires=1777060687&x-signature=g7p%2BzN394BOkBFbedf2fg9Z1bQc%3D" },
-   { id:236, name:"", brand:"Chanel", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/a7cb75098a8143f88d40f15239b74257.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260418035806699797CBACB36B0A932F&rrcfp=8a172a1a&x-expires=1777060687&x-signature=QKyrwf%2FNJS%2BcaBsXpIi0hZqB5QI%3D" },
-   { id:237, name:"", brand:"Chanel", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/fc5f74971b334f38905b3d21e1e8d7d7.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260418035806699797CBACB36B0A932F&rrcfp=8a172a1a&x-expires=1777060687&x-signature=4JZ9SBw%2BSGkPGWJ5jzVtsoF4B3I%3D" },
-   { id:238, name:"", brand:"Chanel", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/6c5e9ba6689f472ea965cd4de6e38de3.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260418035806699797CBACB36B0A932F&rrcfp=8a172a1a&x-expires=1777060687&x-signature=bzMVAUEDfkHszz4QtIjvD0o8IWk%3D" },
-   { id:239, name:"", brand:"Chanel", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/ab5998ec8ac442219008d9ebabbabcb5.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260418035806699797CBACB36B0A932F&rrcfp=8a172a1a&x-expires=1777060687&x-signature=Wtvsd2UwOZ%2Fq2O%2BF42pZNe%2F0aPY%3D" },
-   { id:240, name:"", brand:"Chanel", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/568e7ec411c54762a5fd604a8a33f035.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=20260418035806699797CBACB36B0A932F&rrcfp=8a172a1a&x-expires=1777060687&x-signature=4SUkc%2BLQmwvtxCyoDVL3bpdYX5k%3D" },
-   { id:241, name:"", brand:"Chanel", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/7cf6c5841fc54a30afdbd1bfd325b065.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604180359099498F7E4BBC4C8895D2B&rrcfp=8a172a1a&x-expires=1777060749&x-signature=6URkK5hcYxyRj6ieMX8GhKZIBFg%3D" },
-   { id:242, name:"", brand:"Chanel", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/7ab1de237776402ebddcecb57109beab.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604180359099498F7E4BBC4C8895D2B&rrcfp=8a172a1a&x-expires=1777060749&x-signature=qW%2FLx0nXMRIeczdy1tsTpHkPdHU%3D" },
-   { id:243, name:"", brand:"Chanel", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/28763b84a14841319cacef68a1bef4f7.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604180359099498F7E4BBC4C8895D2B&rrcfp=8a172a1a&x-expires=1777060749&x-signature=TMrw3eKjcZh18x9%2F7SrwOCy7U18%3D" },
-   { id:244, name:"", brand:"Chanel", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/0c597321eba149aca62d1eeafa0a7bc1.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604180359099498F7E4BBC4C8895D2B&rrcfp=8a172a1a&x-expires=1777060749&x-signature=Tpo4ilKljGckVHaoNjzDUCwNsgY%3D" },
-   { id:245, name:"", brand:"Chanel", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/682e77d1212641dd9f7e6a0cb515d6c3.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604180359099498F7E4BBC4C8895D2B&rrcfp=8a172a1a&x-expires=1777060749&x-signature=nNsK5aYlJExLVIcOsC47oMltEUM%3D" },
-   { id:246, name:"", brand:"Chanel", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/bfd6cc246015492f8d473073f296d7aa.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604180359099498F7E4BBC4C8895D2B&rrcfp=8a172a1a&x-expires=1777060749&x-signature=5a8JRFLrmu%2F%2BTt0v8e0EOGOF8CY%3D" },
-   { id:247, name:"", brand:"Chanel", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f1bad956d2da463b8aa67adc61c8b81f.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604180359099498F7E4BBC4C8895D2B&rrcfp=8a172a1a&x-expires=1777060749&x-signature=HsbWGOJfCJbDW3np5FFp6B57AUc%3D" },
-   { id:248, name:"", brand:"Chanel", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/b0135169025f41b4a4a79f9e1fcaafd6.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604180359099498F7E4BBC4C8895D2B&rrcfp=8a172a1a&x-expires=1777060749&x-signature=IfaPWtgshLPrlHbOcez0oukJCJ4%3D" },
-   { id:249, name:"", brand:"Chanel", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/0ede578727644deeab5c2c502e66f38c.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604180359099498F7E4BBC4C8895D2B&rrcfp=8a172a1a&x-expires=1777060749&x-signature=OL%2FhiZUPro%2BkWe1E5I0pjupZvbI%3D" },
-   { id:250, name:"", brand:"Chanel", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/6fc472c2dc2f4389a22edeb01259700a.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=202604180359099498F7E4BBC4C8895D2B&rrcfp=8a172a1a&x-expires=1777060749&x-signature=TEs6MHPBcuaiBK6S58gLfCImquw%3D" },
-   { id:251, name:"", brand:"Chanel", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/95b124a8bad64b7b9b4cd43568594f13.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803592595C1D15CA12F6F138420&rrcfp=8a172a1a&x-expires=1777060765&x-signature=ahrZfR9svnmt4w58tmSkNUX78wE%3D" },
-   { id:252, name:"", brand:"Chanel", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/a248ec180ee04ac2bdcfb4838e90726e.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803592595C1D15CA12F6F138420&rrcfp=8a172a1a&x-expires=1777060765&x-signature=m9ff8YoPc1UazM6%2FqR5lkNgEuwI%3D" },
-   { id:253, name:"", brand:"Chanel", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/d3168e30c5614d5295632ef1666ee45a.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803592595C1D15CA12F6F138420&rrcfp=8a172a1a&x-expires=1777060765&x-signature=vcqDiWskLzfH9Ees2YeqZDgCuYY%3D" },
-   { id:254, name:"", brand:"Chanel", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/117c767143654f279c95f89a7f51ef58.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803592595C1D15CA12F6F138420&rrcfp=8a172a1a&x-expires=1777060765&x-signature=28dJIOs5WAC6SavlZRBl8q2anRQ%3D" },
-   { id:255, name:"", brand:"Chanel", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/c2c612a5d5494b03a81a7dad2ede5def.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803592595C1D15CA12F6F138420&rrcfp=8a172a1a&x-expires=1777060765&x-signature=f8T%2FzurVPCn7L97FhMon1nUN4ig%3D" },
-   { id:256, name:"", brand:"Chanel", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/3b17571dd70849839cacb678722be2a5.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803592595C1D15CA12F6F138420&rrcfp=8a172a1a&x-expires=1777060765&x-signature=CLrpzkuRVk9jL1bw85L3yrjNeZo%3D" },
-   { id:257, name:"", brand:"Chanel", img:"https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/0dbbda82ede84300a27f710940661f40.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803592595C1D15CA12F6F138420&rrcfp=8a172a1a&x-expires=1777060765&x-signature=NE0sSNaeJG0wEbaKl48fCipUQ6g%3D" },
-   { id:258, name:"", brand:"Chanel", img:"https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/860317214e0b4cfbaa875031607a0c41.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803592595C1D15CA12F6F138420&rrcfp=8a172a1a&x-expires=1777060765&x-signature=%2BtPvdQUQZg35nx0jGObxGjUMvAM%3D" },
-   { id:259, name:"", brand:"Chanel", img:"https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/112351d486a24a8b9688996bcc0f47fe.jpg~tplv-a9rns2rl98-24:720:720.jpg?lk3s=8e244e95&rcl=2026041803592595C1D15CA12F6F138420&rrcfp=8a172a1a&x-expires=1777060765&x-signature=v6xrKUssxux0pWgOZHyOiSqQRNE%3D" }
-  ],
-  // brand intros — accurate English translations
-  brandIntro: {
-    "Cartier": "Founded in Paris in 1847, Cartier is a world-renowned luxury watch and jewelry brand, celebrated for its iconic Ballon Bleu, Tank, and Santos collections.",
-    "Vacheron Constantin": "Established in Geneva in 1755, Vacheron Constantin is the world's oldest continuously operating watch manufacturer.",
-    "Rolex": "A Swiss luxury watch icon, synonymous with precision, reliability, durability, and exceptional value retention.",
-    "Patek Philippe": "Universally regarded as the 'blue-blooded aristocrat' of haute horlogerie, Patek Philippe stands at the pinnacle of fine watchmaking.",
-    "Longines": "Founded in 1832 in Switzerland, Longines combines elegant design with outstanding value in the luxury segment.",
-    "Omega": "Established in 1848 in Biel, Switzerland, Omega is renowned for precision timing and innovation — official timekeeper of the Olympic Games and James Bond's choice.",
-    "IWC": "A luxury manufacture from Schaffhausen, IWC is known for robust, masculine designs and practical complications.",
-    "Jaeger-LeCoultre": "A premier watchmaking manufacture that invented the world's first ultra-thin movement and the first reversible watch.",
-    "Audemars Piguet": "Founded in 1875 in Switzerland, Audemars Piguet's Royal Oak collection pioneered the luxury sports watch.",
-    "Richard Mille": "Dubbed the 'billionaire's handshake,' Richard Mille is famed for extreme lightweight materials and avant-garde technical design.",
-    "LV": "A premier French luxury house, famous for its iconic monogram canvas and stylish, functional leather goods and luggage.",
-    "Hermès": "A top-tier French luxury brand celebrated worldwide for its exquisite handcrafted leather goods.",
-    "Chanel": "A classic French luxury maison, cherished for its elegant, timeless, and sophisticated design philosophy."
-  }
+const productCounts = {
+  "Cartier": 19,
+  "Vacheron Constantin": 18,
+  "Rolex": 27,
+  "Patek Philippe": 45,
+  "Longines": 11,
+  "Omega": 13,
+  "IWC": 12,
+  "Jaeger-LeCoultre": 8,
+  "Audemars Piguet": 4,
+  "Richard Mille": 7,
+  "LV": 45,
+  "Hermès": 10,
+  "Chanel": 29
 };
 
-// ==============================================
-// Logic — unchanged, only text replaced above
-// ==============================================
-const products = CONFIG.products;
-const brandIntro = CONFIG.brandIntro;
-let currentBrand = '';
+const brandFolders = {
+  "Cartier": "cartier",
+  "Vacheron Constantin": "vacheron",
+  "Rolex": "rolex",
+  "Patek Philippe": "patek",
+  "Longines": "longines",
+  "Omega": "omega",
+  "IWC": "iwc",
+  "Jaeger-LeCoultre": "jaeger",
+  "Audemars Piguet": "ap",
+  "Richard Mille": "richard",
+  "LV": "lv",
+  "Hermès": "hermes",
+  "Chanel": "chanel"
+};
 
+const brandIntro = {
+  "Cartier": "Founded in Paris in 1847, Cartier is a world-renowned luxury watch and jewelry brand, celebrated for its iconic Ballon Bleu, Tank, and Santos collections.",
+  "Vacheron Constantin": "Established in Geneva in 1755, Vacheron Constantin is the world's oldest continuously operating watch manufacturer.",
+  "Rolex": "A Swiss luxury watch icon, synonymous with precision, reliability, durability, and exceptional value retention.",
+  "Patek Philippe": "Universally regarded as the 'blue-blooded aristocrat' of haute horlogerie, Patek Philippe stands at the pinnacle of fine watchmaking.",
+  "Longines": "Founded in 1832 in Switzerland, Longines combines elegant design with outstanding value in the luxury segment.",
+  "Omega": "Established in 1848 in Biel, Switzerland, Omega is renowned for precision timing and innovation — official timekeeper of the Olympic Games and James Bond's choice.",
+  "IWC": "A luxury manufacture from Schaffhausen, IWC is known for robust, masculine designs and practical complications.",
+  "Jaeger-LeCoultre": "A premier watchmaking manufacture that invented the world's first ultra-thin movement and the first reversible watch.",
+  "Audemars Piguet": "Founded in 1875 in Switzerland, Audemars Piguet's Royal Oak collection pioneered the luxury sports watch.",
+  "Richard Mille": "Dubbed the 'billionaire's handshake,' Richard Mille is famed for extreme lightweight materials and avant-garde technical design.",
+  "LV": "A premier French luxury house, famous for its iconic monogram canvas and stylish, functional leather goods and luggage.",
+  "Hermès": "A top-tier French luxury brand celebrated worldwide for its exquisite handcrafted leather goods.",
+  "Chanel": "A classic French luxury maison, cherished for its elegant, timeless, and sophisticated design philosophy."
+};
+
+// 动态生成产品数组
+const products = [];
+Object.keys(productCounts).forEach(brand => {
+  const folder = brandFolders[brand];
+  const count = productCounts[brand];
+  for (let i = 1; i <= count; i++) {
+    products.push({
+      id: `${folder}-${i}`,
+      name: "",
+      brand: brand,
+      img: `images/${folder}/${folder}_${i}.jpg`
+    });
+  }
+});
+
+// 渲染所有产品
 function renderAllProducts() {
   Object.keys(brandIntro).forEach(brand => {
-    const section = document.querySelector(`#${getBrandId(brand)} .product-grid`);
-    const desc = document.querySelector(`#${getBrandId(brand)} .section-desc`);
-    if(desc) desc.textContent = brandIntro[brand];
+    const grid = document.querySelector(`#grid-${brandFolders[brand]}`);
+    const desc = document.querySelector(`#${brandFolders[brand]} .section-desc`);
+    if (desc) desc.textContent = brandIntro[brand];
     
     const brandProducts = products.filter(p => p.brand === brand);
-    if(section) section.innerHTML = brandProducts.map(p => `
-      <div class="product-card">
-        <img src="${p.img}" class="product-img" data-src="${p.img}">
-        <div class="product-info">
-          <div class="product-name">${p.name}</div>
-          <div class="product-price">Private Quote</div>
+    if (grid) {
+      grid.innerHTML = brandProducts.map(p => `
+        <div class="product-card">
+          <img src="${p.img}" class="product-img" data-src="${p.img}" onerror="this.src='images/placeholder.jpg'">
+          <div class="product-info">
+            <div class="product-name">${p.name}</div>
+            <div class="product-price">Private Quote</div>
+          </div>
         </div>
-      </div>
-    `).join('');
+      `).join('');
+    }
   });
+  bindImageClick();
 }
 
-function getBrandId(name){
-  const map = {"Cartier":"cartier","Vacheron Constantin":"vacheron","Rolex":"rolex","Patek Philippe":"patek","Longines":"longines","Omega":"omega","IWC":"iwc","Jaeger-LeCoultre":"jaeger","Audemars Piguet":"ap","Richard Mille":"richard","LV":"lv","Hermès":"hermes","Chanel":"chanel"};
-  return map[name] || name.toLowerCase().replace(/\s+/g,'');
+function createProductCard(p) {
+  return `
+    <div class="product-card">
+      <img src="${p.img}" class="product-img" data-src="${p.img}" onerror="this.src='images/placeholder.jpg'">
+      <div class="product-info">
+        <div class="product-name">${p.name}</div>
+        <div class="product-price">Private Quote</div>
+      </div>
+    </div>
+  `;
 }
 
-function initHome() { renderAllProducts(); bindImageClick(); }
-function createProductCard(p) { return `
-  <div class="product-card"><img src="${p.img}" class="product-img" data-src="${p.img}"><div class="product-info"><div class="product-name">${p.name}</div><div class="product-price">Private Quote</div></div></div>
-`;}
 function goToBrand(brand) {
   currentBrand = brand; 
   homePage.style.display = 'none'; 
   brandPage.style.display = 'block';
   brandTitle.innerText = brand; 
   brandDesc.innerText = brandIntro[brand] || '';
-  brandProductGrid.innerHTML = products.filter(p=>p.brand===brand).map(p=>createProductCard(p)).join('');
+  const brandProducts = products.filter(p => p.brand === brand);
+  brandProductGrid.innerHTML = brandProducts.map(p => createProductCard(p)).join('');
   bindImageClick();
 }
-function showHome() { brandPage.style.display = 'none'; homePage.style.display = 'block'; window.scrollTo(0,0); }
-function bindImageClick() {
-  document.querySelectorAll('.product-img').forEach(img=>{img.onclick=(e)=>{e.stopPropagation();bigImage.src=img.dataset.src;imageModal.classList.add('show');}});
+
+function showHome() {
+  brandPage.style.display = 'none';
+  homePage.style.display = 'block';
+  window.scrollTo(0,0);
 }
+
+function bindImageClick() {
+  document.querySelectorAll('.product-img').forEach(img => {
+    img.onclick = (e) => {
+      e.stopPropagation();
+      bigImage.src = img.dataset.src;
+      imageModal.classList.add('show');
+    };
+  });
+}
+
 function closeImage() { imageModal.classList.remove('show'); }
 function openContact() { contactModal.classList.add('show'); }
 function closeContact() { contactModal.classList.remove('show'); }
 
-initHome();
+// 初始化
+let currentBrand = '';
+const homePage = document.getElementById('homePage');
+const brandPage = document.getElementById('brandPage');
+const brandTitle = document.getElementById('brandTitle');
+const brandDesc = document.getElementById('brandDesc');
+const brandProductGrid = document.getElementById('brandProductGrid');
+const bigImage = document.getElementById('bigImage');
+const imageModal = document.getElementById('imageModal');
+const contactModal = document.getElementById('contactModal');
+
+renderAllProducts();
 </script>
 </body>
 </html>
